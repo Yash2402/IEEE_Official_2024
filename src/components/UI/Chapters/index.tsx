@@ -1,5 +1,5 @@
-'use client';
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
 import {
   Wrapper,
   Inner,
@@ -11,9 +11,9 @@ import {
   Stats,
   Stat,
   Banner,
-} from './styles';
-import MaskText from '@/components/Common/MaskText';
-import { useIsMobile } from '../../../../libs/useIsMobile';
+} from "./styles";
+import MaskText from "@/components/Common/MaskText";
+import { IsMobile } from "../../../../libs/IsMobile";
 import {
   cardsInfo,
   desktopHeaderPhrase,
@@ -21,10 +21,10 @@ import {
   mobileHeaderPhrase,
   mobileParagraphPhrase,
   stats,
-} from './constants';
+} from "./constants";
 
 const chapter = () => {
-  const isMobile = useIsMobile();
+  const isMobile = IsMobile();
 
   return (
     <Wrapper>
@@ -64,13 +64,7 @@ const chapter = () => {
           ))}
         </Stats>
       </Inner>
-      {/* <Banner>
-        {isMobile ? (
-          <Image src={future_mobile_banner} alt="-" fill />
-        ) : (
-          <Image src={ieee_day} alt="-" fill />
-        )}
-      </Banner> */}
+
     </Wrapper>
   );
 };

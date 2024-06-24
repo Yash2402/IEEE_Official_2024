@@ -1,5 +1,5 @@
-'use client';
-import { useState } from 'react';
+"use client";
+import { useState } from "react";
 import {
   Wrapper,
   Inner,
@@ -13,13 +13,13 @@ import {
   PaginationButtonContainer,
   Previous,
   Next,
-} from './styles';
-import ic_arrow_left from '../../../../public/svgs/ic_arrow_left.svg';
-import ic_arrow_right from '../../../../public/svgs/ic_arrow_right.svg';
-import Image from 'next/image';
-import { MaskText } from '@/components';
-import { useIsMobile } from '../../../../libs/useIsMobile';
-import { Props, desktopHeaderPhrase, testimonials } from './constants';
+} from "./styles";
+import ic_arrow_left from "../../../../public/svgs/ic_arrow_left.svg";
+import ic_arrow_right from "../../../../public/svgs/ic_arrow_right.svg";
+import Image from "next/image";
+import { MaskText } from "@/components";
+import { IsMobile } from "../../../../libs/IsMobile";
+import { Props, desktopHeaderPhrase, testimonials } from "./constants";
 
 const Testimonials = () => {
   const [testimonialsArr, setTestimonialsArr] = useState<Props[]>(testimonials);
@@ -37,7 +37,7 @@ const Testimonials = () => {
     setTestimonialsArr(newArr);
   };
 
-  const isMobile = useIsMobile();
+  const isMobile = IsMobile();
 
   const mappedTestimonials = isMobile
     ? testimonialsArr.slice(0, 1)
@@ -55,7 +55,7 @@ const Testimonials = () => {
               <UserInfo>
                 <Name>
                   <MaskText phrases={new Array(t.person)} tag="h3" />
-                  <MaskText phrases={new Array('IEEE Member')} tag="p" />
+                  <MaskText phrases={new Array("IEEE Member")} tag="p" />
                 </Name>
                 {/* <Avatar>
                   <Image src={t.avatar} alt="user avatar" />

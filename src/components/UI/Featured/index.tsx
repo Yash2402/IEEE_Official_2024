@@ -1,10 +1,10 @@
-'use client';
-import Image from 'next/image';
-import big_banner from '../../../../public/images/team.jpg';
-import featured_mobile_banner from '../../../../public/images/team.jpg';
-import { Wrapper, Inner, ImageContainer, ParallaxImages, Div } from './styles';
-import RevealCover from '@/components/Common/RevealCover';
-import { useIsMobile } from '../../../../libs/useIsMobile';
+"use client";
+import Image from "next/image";
+import big_banner from "../../../../public/images/team.jpg";
+import featured_mobile_banner from "../../../../public/images/team.jpg";
+import { Wrapper, Inner, ImageContainer, ParallaxImages, Div } from "./styles";
+import RevealCover from "@/components/Common/RevealCover";
+import { IsMobile } from "../../../../libs/IsMobile";
 export const imageVariants = {
   hidden: {
     scale: 1.6,
@@ -20,7 +20,7 @@ export const imageVariants = {
 };
 
 const Featured = () => {
-  const isMobile = useIsMobile();
+  const isMobile = IsMobile();
   return (
     <Wrapper>
       <Inner>

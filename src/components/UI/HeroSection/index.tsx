@@ -1,19 +1,19 @@
-'use client';
-import Image from 'next/image';
-import { Wrapper, Inner, Pill, HeroTextContainer } from './styles';
-import ic_chevron_right from '../../../../public/svgs/ic_chevron_right.svg';
-import { GetStartedButton } from '@/components';
-import MaskText from '@/components/Common/MaskText';
-import { useIsMobile } from '../../../../libs/useIsMobile';
+"use client";
+import Image from "next/image";
+import { Wrapper, Inner, Pill, HeroTextContainer } from "./styles";
+import ic_chevron_right from "../../../../public/svgs/ic_chevron_right.svg";
+import { GetStartedButton } from "@/components";
+import MaskText from "@/components/Common/MaskText";
+import { IsMobile } from "../../../../libs/IsMobile";
 import {
   mobileParagraphPhrases,
   mobilePhrases,
   paragraphPhrases,
   phrases,
-} from './constants';
+} from "./constants";
 
 const HeroSection = () => {
-  const isMobile = useIsMobile();
+  const isMobile = IsMobile();
   return (
     <Wrapper>
       <Inner>

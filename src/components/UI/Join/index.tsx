@@ -1,5 +1,5 @@
-'use client';
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
 import {
   Wrapper,
   Inner,
@@ -9,14 +9,14 @@ import {
   Edge,
   Title,
   BriefNote,
-} from './styles';
-import MaskText from '@/components/Common/MaskText';
-import RevealCover from '@/components/Common/RevealCover';
-import { Div } from '../Featured/styles';
-import { imageVariants } from '../Featured';
-import { useIsMobile } from '../../../../libs/useIsMobile';
-import ieee_day from '../../../../public/images/fun1.png';
-import  anu from '../../../../public/images/anu.jpg';
+} from "./styles";
+import MaskText from "@/components/Common/MaskText";
+import RevealCover from "@/components/Common/RevealCover";
+import { Div } from "../Featured/styles";
+import { imageVariants } from "../Featured";
+import { IsMobile } from "../../../../libs/IsMobile";
+import ieee_day from "../../../../public/images/fun1.png";
+import anu from "../../../../public/images/anu.jpg";
 import {
   desktopBriefNotePhrase,
   desktopHeaderPhrase,
@@ -25,10 +25,10 @@ import {
   mobileBriefNotePhrase,
   mobileHeaderPhrase,
   mobileParagraphPhrase,
-} from './constants';
+} from "./constants";
 
 const Join = () => {
-  const isMobile = useIsMobile();
+  const isMobile = IsMobile();
 
   return (
     <Wrapper>
@@ -57,7 +57,7 @@ const Join = () => {
             {isMobile ? (
               <Image src={anu} alt="banner_img" fill />
             ) : (
-              <Image src={ieee_day} alt="banner_img"  />
+              <Image src={ieee_day} alt="banner_img" />
             )}
           </Div>
         </BannerCtn>

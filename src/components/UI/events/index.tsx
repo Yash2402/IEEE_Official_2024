@@ -1,5 +1,5 @@
-'use client';
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
 import {
   Wrapper,
   Inner,
@@ -8,18 +8,18 @@ import {
   OfferCard,
   ImageCtn,
   TextCtn,
-} from './styles';
-import MaskText from '@/components/Common/MaskText';
-import { useIsMobile } from '../../../../libs/useIsMobile';
+} from "./styles";
+import MaskText from "@/components/Common/MaskText";
+import { IsMobile } from "../../../../libs/IsMobile";
 import {
   desktopHeaderPhrases,
   desktopParagraphPhrase,
   mobileParagraphPhrase,
   offers,
-} from './constants';
+} from "./constants";
 
 const events = () => {
-  const isMobile = useIsMobile();
+  const isMobile = IsMobile();
   return (
     <Wrapper>
       <Inner>
