@@ -31,15 +31,15 @@ export const cardsInfo = [
 
 export const stats = [
   {
-    number: '220+',
+    number: '250+',
     subtitle: 'Members',
   },
   {
-    number: '10+',
+    number: '20+',
     subtitle: 'Awards',
   },
   {
-    number: '50+',
+    number: '80+',
     subtitle: 'Events',
   },
   {
