@@ -1,19 +1,24 @@
-import Image from 'next/image';
-import logo from '../../../../public/images/logo_min.png';
-import ic_copyright from '../../../../public/svgs/ic_copyright.svg';
+import Image from "next/image";
+import logo from "../../../../public/images/logo_min.png";
+import ic_copyright from "../../../../public/svgs/ic_copyright.svg";
+import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 const linksArr = [
   {
-    title: 'Contact us',
-    links: ['+91-9534781286' ,'ieeensut@gmail.com', 'NSUT, Sector-3 Dwarka, Delhi'],
+    title: "Contact us",
+    links: [
+      "+91-9534781286",
+      "ieeensut@gmail.com",
+      "NSUT, Sector-3 Dwarka, Delhi",
+    ],
   },
   {
-    title: '',
-    links: ['', '', ''],
+    title: "",
+    links: ["", "", ""],
   },
   {
-    title: 'About us',
-    links: ['Chapters', 'FAQ'],
+    title: "About us",
+    links: ["Chapters", "FAQ"],
   },
 ];
 
@@ -33,7 +38,8 @@ import {
   FooterBottom,
   Translator,
   CopyRight,
-} from './styles';
+  IconCtnSocialMedia,
+} from "./styles";
 
 const Footer = () => {
   return (
@@ -60,6 +66,29 @@ const Footer = () => {
                   </LinksContainer>
                 </GridColumn>
               ))}
+              <IconCtnSocialMedia>
+                <a
+                  href="https://www.instagram.com/ieee_nsut"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram size={24} />
+                </a>
+                <a
+                  href="https://in.linkedin.com/company/ieee-nsut"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedin size={24} />
+                </a>
+                <a
+                  href="https://www.facebook.com/ieeensut/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebook size={24} />
+                </a>
+              </IconCtnSocialMedia>
             </FooterNavigation>
           </FooterMiddle>
           <FooterBottom>

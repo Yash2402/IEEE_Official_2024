@@ -6,7 +6,7 @@ import {
   HeroSection,
   Testimonials,
   Events,
-} from '@/components';
+} from "@/components";
 
 export default function Home() {
   return (

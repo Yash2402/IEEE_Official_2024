@@ -22,50 +22,59 @@ import {
   mobileParagraphPhrase,
   stats,
 } from "./constants";
+import { Element } from "react-scroll";
 
 const chapter = () => {
   const isMobile = IsMobile();
 
   return (
-    <Wrapper>
-      <Inner>
-        <Header>
-          {isMobile ? (
-            <>
-              <MaskText phrases={mobileHeaderPhrase} tag="h1" />
-              <MaskText phrases={mobileParagraphPhrase} tag="p" />
-            </>
-          ) : (
-            <>
-              <MaskText phrases={desktopHeaderPhrase} tag="h1" />
-              <MaskText phrases={desktopParagraphPhrase} tag="p" />
-            </>
-          )}
-        </Header>
-        <CardContainer>
-          {cardsInfo.map((info, i) => (
-            <Card key={i}>
-              <TextCtn>
-                <MaskText phrases={new Array(info.title)} tag="h3" />
-                <MaskText phrases={new Array(info.details)} tag="p" />
-              </TextCtn>
-              <SVGCtn>
-                <Image src={info.icon} alt="icon" />
-              </SVGCtn>
-            </Card>
-          ))}
-        </CardContainer>
-        <Stats>
-          {stats.map((stat, i) => (
-            <Stat key={i}>
-              <MaskText phrases={new Array(stat.number)} tag="h1" />
-              <MaskText phrases={new Array(stat.subtitle)} tag="p" />
-            </Stat>
-          ))}
-        </Stats>
-      </Inner>
-
-    </Wrapper>
+    <Element name="chapter">
+      <Wrapper>
+        <Inner>
+          <Header>
+            {isMobile ? (
+              <>
+                <MaskText phrases={mobileHeaderPhrase} tag="h1" />
+                <MaskText phrases={mobileParagraphPhrase} tag="p" />
+              </>
+            ) : (
+              <>
+                <MaskText phrases={desktopHeaderPhrase} tag="h1" />
+                <MaskText phrases={desktopParagraphPhrase} tag="p" />
+              </>
+            )}
+          </Header>
+          <CardContainer>
+            {cardsInfo.map((info, i) => (
+              <Card key={i}>
+                <TextCtn>
+                  <MaskText phrases={new Array(info.title)} tag="h3" />
+                  <MaskText phrases={new Array(info.details)} tag="p" />
+                </TextCtn>
+                <SVGCtn>
+                  <Image
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
+                    src={info.icon}
+                    alt="icon"
+                  />
+                </SVGCtn>
+              </Card>
+            ))}
+          </CardContainer>
+          <Stats>
+            {stats.map((stat, i) => (
+              <Stat key={i}>
+                <MaskText phrases={new Array(stat.number)} tag="h1" />
+                <MaskText phrases={new Array(stat.subtitle)} tag="p" />
+              </Stat>
+            ))}
+          </Stats>
+        </Inner>
+      </Wrapper>
+    </Element>
   );
 };
 

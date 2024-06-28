@@ -11,32 +11,35 @@ import {
   paragraphPhrases,
   phrases,
 } from "./constants";
+import { Element } from "react-scroll";
 
 const HeroSection = () => {
   const isMobile = IsMobile();
   return (
-    <Wrapper>
-      <Inner>
-        <Pill>
-          <span>Institute of Electrical and Electronics Engineers</span>
-          {/* <Image src={ic_chevron_right} alt="chevron-right" /> */}
-        </Pill>
-        <HeroTextContainer>
-          {isMobile ? (
-            <>
-              <MaskText phrases={mobilePhrases} tag="h1" />
-              <MaskText phrases={mobileParagraphPhrases} tag="p" />
-            </>
-          ) : (
-            <>
-              <MaskText phrases={phrases} tag="h1" />
-              <MaskText phrases={paragraphPhrases} tag="p" />
-            </>
-          )}
-        </HeroTextContainer>
-        <GetStartedButton padding="1rem 2rem" />
-      </Inner>
-    </Wrapper>
+    <Element name="home">
+      <Wrapper>
+        <Inner>
+          <Pill>
+            <span>Institute of Electrical and Electronics Engineers</span>
+            {/* <Image src={ic_chevron_right} alt="chevron-right" /> */}
+          </Pill>
+          <HeroTextContainer>
+            {isMobile ? (
+              <>
+                <MaskText phrases={mobilePhrases} tag="h1" />
+                <MaskText phrases={mobileParagraphPhrases} tag="p" />
+              </>
+            ) : (
+              <>
+                <MaskText phrases={phrases} tag="h1" />
+                <MaskText phrases={paragraphPhrases} tag="p" />
+              </>
+            )}
+          </HeroTextContainer>
+          <GetStartedButton padding="1rem 2rem" />
+        </Inner>
+      </Wrapper>
+    </Element>
   );
 };
 

@@ -1,5 +1,5 @@
-'use client';
-import { styled } from 'styled-components';
+"use client";
+import { styled } from "styled-components";
 
 export const Wrapper = styled.footer`
   padding-bottom: 3.5rem;
@@ -98,10 +98,13 @@ export const FooterNavigation = styled.div`
 export const GridColumn = styled.div`
   display: flex;
   min-width: 12.5rem;
-  width: 100%;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+
+  li {
+    width: fit-content;
+  }
 
   @media (max-width: 768px) {
     min-width: auto;
@@ -123,7 +126,7 @@ export const LinksContainer = styled.ul`
 
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       width: 100%;
       height: 1px;
       background-color: #efefef;
@@ -179,4 +182,11 @@ export const CopyRight = styled.div`
     font-size: 0.875rem;
     gap: 0.25rem;
   }
+`;
+
+export const IconCtnSocialMedia = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
 `;

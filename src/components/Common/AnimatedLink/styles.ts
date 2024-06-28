@@ -1,6 +1,6 @@
-'use client';
-import { motion } from 'framer-motion';
-import { styled } from 'styled-components';
+"use client";
+import { motion } from "framer-motion";
+import { styled } from "styled-components";
 
 export const Div = styled(motion.div)`
   position: relative;
@@ -20,7 +20,7 @@ export const Span = styled(motion.span)`
   display: inline-block;
   white-space: nowrap;
   color: var(--link-color);
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
 
   @media (max-width: 768px) {

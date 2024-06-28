@@ -1,6 +1,7 @@
-'use client';
-import { useState } from 'react';
-import { Div, Word, Span, AbsoluteContainer } from './styles';
+"use client";
+import { useState } from "react";
+import { Div, Word, Span, AbsoluteContainer } from "./styles";
+import { Link as ScrollLink } from "react-scroll";
 
 type AnimationProps = {
   rest: {
@@ -38,7 +39,7 @@ const letterAnimation = {
     transition: {
       duration: 0.3,
       ease: [0.6, 0.01, 0.05, 0.95],
-      type: 'tween',
+      type: "tween",
     },
   },
 };
@@ -52,30 +53,36 @@ const letterAnimationTwo = {
     transition: {
       duration: 0.3,
       ease: [0.6, 0.01, 0.05, 0.95],
-      type: 'tween',
+      type: "tween",
     },
   },
 };
+interface AnimatedLinkProps {
+  title: string;
+  to: string;
+}
 
-const AnimatedLink = ({ title }: { title: string }) => {
+const AnimatedLink = ({ title, to }: AnimatedLinkProps) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <Div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <AnimatedWord
-        title={title}
-        animations={letterAnimation}
-        isHovered={isHovered}
-      />
-      <AbsoluteContainer>
+      <ScrollLink to={to} smooth={true} duration={1000}>
         <AnimatedWord
           title={title}
-          animations={letterAnimationTwo}
+          animations={letterAnimation}
           isHovered={isHovered}
         />
-      </AbsoluteContainer>
+        <AbsoluteContainer>
+          <AnimatedWord
+            title={title}
+            animations={letterAnimationTwo}
+            isHovered={isHovered}
+          />
+        </AbsoluteContainer>
+      </ScrollLink>
     </Div>
   );
 };
@@ -90,20 +97,24 @@ const AnimatedWord = ({
   title: string;
   animations: AnimationProps;
   isHovered: boolean;
-}) => (
-  <Word
-    variants={titleAnimation}
-    initial="rest"
-    animate={isHovered ? 'hover' : 'rest'}
-  >
-    {title.split('').map((char, i) =>
-      char === ' ' ? (
-        <Span key={i}>&nbsp;</Span>
-      ) : (
-        <Span variants={animations} key={i}>
-          {char}
-        </Span>
-      )
-    )}
-  </Word>
-);
+  href?: string;
+}) => {
+  const wordContent = (
+    <Word
+      variants={titleAnimation}
+      initial="rest"
+      animate={isHovered ? "hover" : "rest"}
+    >
+      {title.split("").map((char, i) =>
+        char === " " ? (
+          <Span key={i}>&nbsp;</Span>
+        ) : (
+          <Span variants={animations} key={i}>
+            {char}
+          </Span>
+        )
+      )}
+    </Word>
+  );
+  return wordContent;
+};

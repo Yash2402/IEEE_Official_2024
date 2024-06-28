@@ -26,61 +26,63 @@ import {
   mobileHeaderPhrase,
   mobileParagraphPhrase,
 } from "./constants";
-
+import { Element } from "react-scroll";
 const Join = () => {
   const isMobile = IsMobile();
 
   return (
-    <Wrapper>
-      <Inner>
-        <Header>
-          {isMobile ? (
-            <>
-              <MaskText phrases={mobileHeaderPhrase} tag="h1" />
-              <MaskText phrases={mobileParagraphPhrase} tag="p" />
-            </>
-          ) : (
-            <>
-              <MaskText phrases={desktopHeaderPhrase} tag="h1" />
-              <MaskText phrases={desktopParagraphPhrase} tag="p" />
-            </>
-          )}
-        </Header>
-        <BannerCtn>
-          <RevealCover />
-          <Div
-            variants={imageVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ amount: 0.25, once: true }}
-          >
+    <Element name="about">
+      <Wrapper>
+        <Inner>
+          <Header>
             {isMobile ? (
-              <Image src={anu} alt="banner_img" fill />
+              <>
+                <MaskText phrases={mobileHeaderPhrase} tag="h1" />
+                <MaskText phrases={mobileParagraphPhrase} tag="p" />
+              </>
             ) : (
-              <Image src={ieee_day} alt="banner_img" />
+              <>
+                <MaskText phrases={desktopHeaderPhrase} tag="h1" />
+                <MaskText phrases={desktopParagraphPhrase} tag="p" />
+              </>
             )}
-          </Div>
-        </BannerCtn>
-        <Edges>
-          {edges.map((edge, i) => (
-            <Edge key={i}>
-              <Title>
-                <Image src={edge.icon} alt="icon" />
-                <MaskText phrases={new Array(edge.point)} tag="h3" />
-              </Title>
-              <MaskText phrases={new Array(edge.details)} tag="p" />
-            </Edge>
-          ))}
-        </Edges>
-      </Inner>
-      <BriefNote>
-        {isMobile ? (
-          <MaskText phrases={mobileBriefNotePhrase} tag="p" />
-        ) : (
-          <MaskText phrases={desktopBriefNotePhrase} tag="p" />
-        )}
-      </BriefNote>
-    </Wrapper>
+          </Header>
+          <BannerCtn>
+            <RevealCover />
+            <Div
+              variants={imageVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ amount: 0.25, once: true }}
+            >
+              {isMobile ? (
+                <Image src={anu} alt="banner_img" fill />
+              ) : (
+                <Image src={ieee_day} alt="banner_img" />
+              )}
+            </Div>
+          </BannerCtn>
+          <Edges>
+            {edges.map((edge, i) => (
+              <Edge key={i}>
+                <Title>
+                  <Image src={edge.icon} alt="icon" />
+                  <MaskText phrases={new Array(edge.point)} tag="h3" />
+                </Title>
+                <MaskText phrases={new Array(edge.details)} tag="p" />
+              </Edge>
+            ))}
+          </Edges>
+        </Inner>
+        <BriefNote>
+          {isMobile ? (
+            <MaskText phrases={mobileBriefNotePhrase} tag="p" />
+          ) : (
+            <MaskText phrases={desktopBriefNotePhrase} tag="p" />
+          )}
+        </BriefNote>
+      </Wrapper>
+    </Element>
   );
 };
 
