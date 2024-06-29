@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import logo from "../../../../public/images/logo_min.png";
 import ic_copyright from "../../../../public/svgs/ic_copyright.svg";
 import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { Link as ScrollLink } from "react-scroll";
 
 const linksArr = [
   {
@@ -18,7 +20,15 @@ const linksArr = [
   },
   {
     title: "About us",
-    links: ["Chapters", "FAQ"],
+    // links: ["Chapters", "FAQ"],
+    links: [
+      <ScrollLink key={1} to="chapter" smooth={true} duration={1000}>
+        Chapters
+      </ScrollLink>,
+      <ScrollLink key={2} to="faq" smooth={true} duration={1000}>
+        FAQ
+      </ScrollLink>,
+    ],
   },
 ];
 

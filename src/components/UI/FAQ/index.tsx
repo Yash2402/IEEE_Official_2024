@@ -19,6 +19,7 @@ import {
   faqData,
   mobileHeaderPhrase,
 } from "./constants";
+import { Element } from "react-scroll";
 
 const FAQ = () => {
   const [openItem, setOpenItem] = useState<number | null>(null);
@@ -37,42 +38,44 @@ const FAQ = () => {
   const isMobile = IsMobile();
 
   return (
-    <Wrapper>
-      <Inner>
-        {isMobile ? (
-          <MaskText phrases={mobileHeaderPhrase} tag="h1" />
-        ) : (
-          <MaskText phrases={desktopHeaderPhrase} tag="h1" />
-        )}
-        <Accordion ref={accordionRef}>
-          {faqData.map((item, index) => (
-            <AccordionItem
-              variants={animate}
-              initial="initial"
-              animate={isInView ? "open" : ""}
-              custom={index}
-              key={index}
-            >
-              <Question onClick={() => toggleItem(index)}>
-                {item.question}
-                <Image src={ic_chevron_down} alt="cheveron down" />
-              </Question>
-              <AnimatePresence>
-                {openItem === index && (
-                  <Answer
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                  >
-                    {item.answer}
-                  </Answer>
-                )}
-              </AnimatePresence>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </Inner>
-    </Wrapper>
+    <Element name="faq">
+      <Wrapper>
+        <Inner>
+          {isMobile ? (
+            <MaskText phrases={mobileHeaderPhrase} tag="h1" />
+          ) : (
+            <MaskText phrases={desktopHeaderPhrase} tag="h1" />
+          )}
+          <Accordion ref={accordionRef}>
+            {faqData.map((item, index) => (
+              <AccordionItem
+                variants={animate}
+                initial="initial"
+                animate={isInView ? "open" : ""}
+                custom={index}
+                key={index}
+              >
+                <Question onClick={() => toggleItem(index)}>
+                  {item.question}
+                  <Image src={ic_chevron_down} alt="cheveron down" />
+                </Question>
+                <AnimatePresence>
+                  {openItem === index && (
+                    <Answer
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                    >
+                      {item.answer}
+                    </Answer>
+                  )}
+                </AnimatePresence>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </Inner>
+      </Wrapper>
+    </Element>
   );
 };
 
