@@ -56,10 +56,14 @@ export const QRContainer = styled.div`
   padding: 1.25rem 1rem;
   gap: 0.75rem;
   border-radius: 0.5rem;
+
   border: 1px dashed var(--White, #fff);
 `;
 
-export const QRImageCtn = styled.div``;
+export const QRImageCtn = styled.div`
+  // center it
+  display: flex;
+`;
 
 export const TextCtn = styled.div`
   display: flex;
@@ -68,7 +72,7 @@ export const TextCtn = styled.div`
 
   p {
     max-width: 19.5625rem;
-    font-size: 1.25rem;
+    font-size: 1.64rem;
     font-weight: 400;
   }
 
