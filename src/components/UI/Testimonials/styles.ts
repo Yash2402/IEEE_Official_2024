@@ -30,7 +30,7 @@ export const Header = styled.header`
   @media (max-width: 768px) {
     margin-bottom: 2.5rem;
     h1 {
-      font-size: 2rem;
+      font-size: 2.25rem;
     }
   }
 `;
@@ -55,6 +55,7 @@ export const Testimonial = styled.div`
   border-left: 2px solid #e0e0e0;
 
   @media (max-width: 768px) {
+    padding: 0.5rem 0.75rem;
     border-left: none;
   }
 `;
