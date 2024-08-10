@@ -11,7 +11,7 @@ import {
   BurgerMenu,
   image,
 } from "./styles";
-import logo from "../../../../public/images/logo_min.png";
+import logo from "../../../../public/images/logo.png";
 import ic_bars from "../../../../public/svgs/ic_bars.svg";
 import { GetStartedButton } from "@/components";
 import AnimatedLink from "@/components/Common/AnimatedLink";

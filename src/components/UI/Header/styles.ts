@@ -40,13 +40,13 @@ export const BurgerMenu = styled.div`
 
   @media (max-width: 768px) {
     display: block;
-    padding: 0.5rem;
+    padding: 0.5rem 0.64rem 0rem 0rem;
 
     div {
       position: absolute;
-      background: var(--emerald);
+      background: #a0a0a0;
       width: 150px;
-      height: 300px;
+      height: 540px;
       border-radius: 25px;
       z-index: 1;
       top: 50px;
@@ -65,7 +65,6 @@ export const Nav = styled.div`
   align-items: center;
   gap: 3.75rem;
   position: relative;
-  margin-right: -6.3rem;
 
   a {
     color: var(--link-color);
