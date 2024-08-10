@@ -12,31 +12,31 @@ export type Props = {
 export const testimonials = [
   {
     testimony:
-      "IEEE has played a pivotal role in my career, offering a platform to collaborate with like-minded professionals and stay updated with the latest advancements in analog electronics. The recognition as an IEEE Fellow has been an honor, and I am grateful for the opportunities to contribute to the IEEE CAS Society. IEEE continues to inspire innovation and excellence in engineering.",
+      "IEEE has been instrumental in my career, providing a platform to collaborate with peers and stay updated on analog electronics. Being recognized as an IEEE Fellow is an honor, and I’m grateful for the chance to contribute to the IEEE CAS Society. IEEE continues to inspire innovation and excellence in engineering.",
     person: 'Prof. Raj Senani',
     avatar: robert_fox,
   },
   {
     testimony:
-      "My association with IEEE has been instrumental in my growth as a computer engineer. The conferences and workshops have not only broadened my knowledge but also helped me connect with industry leaders and academicians. Publishing in IEEE journals has given my research global visibility, and I am proud to be a part of such a prestigious organization.",
+      "My association with IEEE has been key to my growth as a computer engineer. The conferences and workshops expanded my knowledge and connected me with industry leaders. Publishing in IEEE journals gave my research global visibility, and I’m proud to be part of this prestigious organization.",
     person: 'Dr. Rakesh Kumar',
     avatar: cameron_williamson,
   },
   {
     testimony:
-      "IEEE has provided a fantastic platform for me to advance my career and contribute to the field of engineering. The Women in Engineering (WIE) initiatives have been particularly inspiring, encouraging more women to pursue careers in STEM. The wealth of resources and the vibrant community have made IEEE an invaluable part of my professional life.",
+      "IEEE has been a fantastic platform for advancing my career and contributing to engineering. The Women in Engineering (WIE) initiatives have been especially inspiring, encouraging more women to pursue STEM careers. The wealth of resources and vibrant community make IEEE an invaluable part of my professional life.",
     person: 'Dr. Neeta Pandey',
     avatar: esther_howard,
   },
   {
     testimony:
-      "IEEE has been a cornerstone in my professional development, particularly in the fields of power electronics and renewable energy. The technical committees and conferences have allowed me to collaborate with experts from around the world and stay at the forefront of technological advancements. IEEE's commitment to innovation and excellence is truly commendable.",
+      "IEEE has been crucial to my growth in power electronics and renewable energy. Through its committees and conferences, I’ve collaborated with global experts and stayed at the forefront of technology. IEEE’s commitment to innovation is commendable.",
     person: 'Dr. Sanjeev Jain',
     avatar: cameron_williamson,
   },
   {
     testimony:
-      "IEEE has been a vital part of my journey in computer science and engineering. The organization's commitment to advancing technology and supporting professionals through conferences, publications, and educational resources is unparalleled. IEEE has provided me with numerous opportunities to grow, collaborate, and contribute to the engineering community.",
+      "IEEE has been essential to my growth in computer science and engineering. Its support through conferences, publications, and resources is unmatched, offering countless opportunities to grow, collaborate, and contribute to the field.",
     person: 'Prof. Yogesh Singh',
     avatar: robert_fox,
   },

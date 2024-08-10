@@ -23,7 +23,7 @@ export const Header = styled.header`
   margin: 0 auto 2.5rem;
   h1 {
     color: #e0e0e0;
-    font-size: 4.75rem;
+    font-size: 3.75rem;
     font-weight: 400;
   }
 
@@ -47,13 +47,12 @@ export const TestimonialWrapper = styled.div`
 
 export const Testimonial = styled.div`
   display: flex;
-  max-width: 26rem;
+  max-width: 22rem;
   padding: 1.5rem 2rem;
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5rem;
-  border: 2px solid #cdd6f4;
-  border-radius: 10px;
+  border-left: 2px solid #e0e0e0;
 
   @media (max-width: 768px) {
     border-left: none;
@@ -62,7 +61,7 @@ export const Testimonial = styled.div`
 
 export const Testimony = styled.p`
   color: #d0d0d0;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 400;
 
   @media (max-width: 768px) {
@@ -87,7 +86,7 @@ export const Name = styled.div`
 
   h3 {
     color: #CDD6F4;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 500;
   }
 
