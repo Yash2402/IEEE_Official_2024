@@ -1,17 +1,19 @@
 "use client";
 import Image from "next/image";
 import ic_import from "../../../../public/svgs/ic_import.svg";
+import logo from "../../../../public/images/logo-without-ieeensut.png";
 
 import { Wrapper, Inner, SecondOverlay } from "./styles";
 import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { image } from "../Header/styles";
 
 const Preloader = ({
   setComplete,
 }: {
   setComplete: Dispatch<SetStateAction<boolean>>;
 }) => {
-  const word = ["I", "E", "E", "E"];
+  const word = ["I", "E", "E", "E", " ", "N", "S", "U", "T"];
 
   const spans = useRef<any>([]); // Create a ref to store the span elements
   const imageRef = useRef(null);
@@ -21,13 +23,14 @@ const Preloader = ({
   useEffect(() => {
     const tl = gsap.timeline();
     tl.to(imageRef.current, {
-      rotate: "360deg",
+      y: "0%", // Move the spans up
       ease: "back.out(1.7)", // Easing function
-      duration: 1.4,
+      duration: 1,
     });
     tl.to(imageRef.current, {
       y: "-100%", // Move the spans up
       ease: "back.out(1.7)", // Easing function
+      duration: 0.5,
     });
     // Iterate through the span elements and animate them
     tl.to(spans.current, {
@@ -42,7 +45,7 @@ const Preloader = ({
       transformOrigin: "top",
       ease: "back.out(1.7)",
       duration: 1,
-      stagger: 0.2,
+      stagger: 0.02,
       onComplete: () => {
         setComplete(true);
       },
@@ -62,7 +65,7 @@ const Preloader = ({
     <>
       <Wrapper ref={wrapperRef}>
         <Inner>
-          <Image ref={imageRef} src={ic_import} alt="import icon" />
+          <Image ref={imageRef} src={logo} alt="import icon" />
           <div>
             {word.map((t, i) => (
               <div

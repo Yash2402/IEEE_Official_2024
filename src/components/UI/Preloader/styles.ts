@@ -13,21 +13,22 @@ export const Wrapper = styled.div`
   bottom: 0;
   right: 0;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Inner = styled.div`
   display: flex;
   gap: 2em;
   align-items: center;
-  padding: 0 2em;
+  padding: 0 0em;
   overflow: hidden;
-  height: 20em;
+  height: 14em;
 
   img {
-    width: 25em;
-    height: 25em;
+    padding-top: 2rem;
+    width: 10em;
+    height: 13em;
   }
 
   div {
@@ -37,7 +38,7 @@ export const Inner = styled.div`
 
     div {
       font-weight: 600;
-      font-size: 25em;
+      font-size: 6em;
     }
   }
 
