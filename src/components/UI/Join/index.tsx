@@ -38,12 +38,12 @@ const Join = () => {
             {isMobile ? (
               <>
                 <MaskText phrases={mobileHeaderPhrase} tag="h1" />
-                <MaskText phrases={mobileParagraphPhrase} tag="p" />
+                <p>{mobileParagraphPhrase}</p>
               </>
             ) : (
               <>
                 <MaskText phrases={desktopHeaderPhrase} tag="h1" />
-                <MaskText phrases={desktopParagraphPhrase} tag="p" />
+                <p>{desktopParagraphPhrase}</p>
               </>
             )}
           </Header>

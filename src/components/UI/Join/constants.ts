@@ -10,10 +10,7 @@ export const desktopParagraphPhrase = [
   "the world’s largest Professional Association for the Advancement Of Technology,",
 ];
 export const desktopBriefNotePhrase = [
-  'Innovative learning,',
-  'advanced research, and',
-  'expert networking, all in',
-  'one society.',
+  'Innovative learning, advanced research, and expert networking, all in one society.',
 ];
 
 // For mobile

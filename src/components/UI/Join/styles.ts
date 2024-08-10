@@ -32,14 +32,14 @@ export const Header = styled.header`
   text-align: center;
 
   h1 {
-    font-size: 4.75rem;
+    font-size: 3.75rem;
     font-weight: 400;
   }
 
   p {
     max-width: 41.75rem;
     color: var(--link-color);
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.75rem;
   }
@@ -62,7 +62,7 @@ export const BannerCtn = styled.div`
   margin-bottom: 5rem;
   width: 130%;
   position: relative;
-  height: 38.4375rem;
+  height: 34.4375rem;
   overflow: hidden;
   border-radius: 0.75rem;
 
@@ -114,12 +114,12 @@ export const Title = styled.div`
 
 export const BriefNote = styled.div`
   max-height: 54.75rem;
-  padding: 8.25rem 4.5rem;
+  padding: 4.25rem 4.5rem;
   background: var(--emerald);
 
   p {
-    color: var(--Background, #070606);
-    font-size: 8rem;
+    color: #e0e0e0;  
+    font-size: 6rem;
     font-weight: 400;
     max-width: 1440px;
   }
