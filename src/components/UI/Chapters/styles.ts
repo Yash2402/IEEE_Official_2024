@@ -8,7 +8,7 @@ export const Wrapper = styled.section`
 
 export const Inner = styled.div`
   width: 90%;
-  max-width: 1440px;
+  max-width: 1080px;
   margin: 0 auto;
 `;
 
@@ -20,7 +20,7 @@ export const Header = styled.header`
   margin-bottom: 6rem;
 
   h1 {
-    font-size: 4.75rem;
+    font-size: 3.75rem;
     font-weight: 400;
   }
 
@@ -47,7 +47,7 @@ export const Header = styled.header`
 export const CardContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3.5rem;
+  gap: 1.25rem;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -56,13 +56,17 @@ export const CardContainer = styled.div`
 `;
 
 export const Card = styled.div`
-  height: 50rem;
+  height: auto;
   border-radius: 0.75rem;
   border: 1px solid var(--stroke, rgba(255, 255, 255, 0.04));
   background: #131313;
+  display: flex;
+  flex-direction: row;
 
   @media (max-width: 768px) {
-    height: 27.5rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
   }
 `;
 
@@ -74,16 +78,14 @@ export const TextCtn = styled.div`
   margin: 3.25rem 3.25rem 2.94rem 3.25rem;
 
   h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
-    line-height: 1.75rem;
   }
 
   p {
     color: var(--link-color);
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 1.75rem;
   }
 
   @media (max-width: 768px) {
@@ -103,29 +105,30 @@ export const TextCtn = styled.div`
 
 export const SVGCtn = styled.div`
   background: url(${card_grid.src});
-  height: 24.55rem;
+  height: auto;
   display: grid;
   place-items: center;
+  margin-left: 40px;
   img {
-    width: 30rem;
-    height: 30rem;
+    width: 50rem;
+    height: 70rem;
   }
 
   @media (max-width: 768px) {
-    height: 15.28219rem;
+    height: auto;
     background-position: center center;
     background-size: contain;
 
     img {
-      width: 17rem;
-      height: 17rem;
+      width:  12rem;
+      height: 12rem;
     }
   }
 `;
 
 export const Stats = styled.div`
   margin: 6.25rem auto;
-  width: 100%;
+  width: 75%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -143,7 +146,7 @@ export const Stat = styled.div`
   gap: 1rem;
 
   h1 {
-    font-size: 5rem;
+    font-size: 3.75rem;
     font-weight: 600;
   }
 
@@ -164,18 +167,6 @@ export const Stat = styled.div`
     }
   }
 `;
-
-// export const Number = styled.h1`
-//   font-size: 5rem;
-//   font-weight: 600;
-// `;
-
-// export const SubTitle = styled.p`
-//   color: var(--link-color);
-//   font-size: 1.125rem;
-//   font-weight: 500;
-//   text-transform: uppercase;
-// `;
 
 export const Banner = styled.div`
   height: 45rem;

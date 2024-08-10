@@ -42,9 +42,10 @@ export const HeroTextContainer = styled.div`
   flex-direction: column;
   gap: 1.5rem;
   padding-bottom: 2rem;
+  padding-top: 2rem;
 
   h1 {
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 400;
   }
 

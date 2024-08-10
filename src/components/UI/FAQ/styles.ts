@@ -8,15 +8,15 @@ export const Wrapper = styled.div`
 
 export const Inner = styled.div`
   width: 90%;
-  max-width: 1440px;
+  max-width: 1080px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 6.25rem;
+  gap: 4.75rem;
 
   h1 {
     max-width: 56rem;
-    font-size: 6rem;
+    font-size: 3.75rem;
     font-weight: 400;
   }
 
@@ -52,7 +52,7 @@ export const Question = styled(motion.div)`
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
 

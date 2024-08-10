@@ -47,20 +47,20 @@ const chapter = () => {
           <CardContainer>
             {cardsInfo.map((info, i) => (
               <Card key={i}>
+              <SVGCtn>
+              <Image
+              style={{
+                  width: "100%",
+                  height: "auto",
+              }}
+              src={info.icon}
+              alt="icon"
+              />
+              </SVGCtn>
                 <TextCtn>
                   <MaskText phrases={new Array(info.title)} tag="h3" />
                   <MaskText phrases={new Array(info.details)} tag="p" />
                 </TextCtn>
-                <SVGCtn>
-                  <Image
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                    }}
-                    src={info.icon}
-                    alt="icon"
-                  />
-                </SVGCtn>
               </Card>
             ))}
           </CardContainer>
