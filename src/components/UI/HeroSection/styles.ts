@@ -3,7 +3,7 @@ import { styled } from 'styled-components';
 import hero_background from '../../../../public/images/grid_background.png';
 
 export const Wrapper = styled.section`
-  margin-top: 6.25rem;
+  margin-top: 4.25rem;
 `;
 
 export const Inner = styled.div`
@@ -27,7 +27,6 @@ export const Pill = styled.div`
   border-radius: 6.25rem;
   border: 0.2px solid #989898;
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
   margin-bottom: 1rem;
 
   span {
@@ -45,14 +44,14 @@ export const HeroTextContainer = styled.div`
   padding-top: 2rem;
 
   h1 {
-    font-size: 5rem;
+    font-size: 3.75rem;
     font-weight: 400;
   }
 
   p {
     max-width: 41.75rem;
     color: #bdbdbd;
-    font-size: 1.5rem;
+    font-size: 1.125rem;
     font-weight: 400;
     margin: 0 auto;
   }

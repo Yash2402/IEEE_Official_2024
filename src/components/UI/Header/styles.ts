@@ -65,6 +65,8 @@ export const Nav = styled.div`
   align-items: center;
   gap: 3.75rem;
   position: relative;
+  margin-right: -3.125rem;
+  margin-left: -3.3rem;
 
   a {
     color: var(--link-color);

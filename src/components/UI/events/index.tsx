@@ -27,12 +27,7 @@ const events = () => {
         <Inner>
           <Header>
             <MaskText phrases={desktopHeaderPhrases} tag="h1" />
-
-            {isMobile ? (
-              <MaskText phrases={mobileParagraphPhrase} tag="p" />
-            ) : (
-              <MaskText phrases={desktopParagraphPhrase} tag="p" />
-            )}
+            <p>{desktopParagraphPhrase}</p>
           </Header>
           <Offers id=" ">
             {offers.slice(0, 2).map((offer, i) => (

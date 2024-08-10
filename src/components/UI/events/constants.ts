@@ -8,15 +8,7 @@ export const desktopHeaderPhrases = [
   "Pioneering Events by IEEE NSUT",
 ];
 export const desktopParagraphPhrase = [
-  "With a focus on excellence,",
-  "IEEE NSUT's events provide unparalleled opportunities for ",
-  "networking, skill-building, and real-world problem-solving.",
-];
-
-// For mobile
-export const mobileParagraphPhrase = [
-  "With a focus on excellence,",
-  "IEEE NSUT's events provide unparalleled opportunities for ",
+  "With a focus on excellence, IEEE NSUT's events provide unparalleled opportunities for ",
   "networking, skill-building, and real-world problem-solving.",
 ];
 

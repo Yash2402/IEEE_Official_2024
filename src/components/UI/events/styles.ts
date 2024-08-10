@@ -5,7 +5,7 @@ import grid_background from '../../../../public/images/offer_card_grid_1.png';
 export const Wrapper = styled.section``;
 
 export const Inner = styled.div`
-  max-width: 1440px;
+  max-width: 1280px;
   width: 90%;
   margin: 12.38rem auto 0;
 
@@ -24,14 +24,14 @@ export const Header = styled.header`
   margin: 0 auto 6.75rem;
 
   h1 {
-    font-size: 4.75rem;
+    font-size: 3.75rem;
     font-weight: 400;
   }
 
   p {
     max-width: 41.75rem;
     color: #989898;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.75rem;
   }
@@ -64,6 +64,7 @@ export const ImageCtn = styled.div`
   }
 
   img {
+    margin: auto;
     width: 100%;
     object-fit: contain;
   }
@@ -76,7 +77,7 @@ export const ImageCtn = styled.div`
     }
 
     img {
-      width: 90%;
+      width: 70%;
       margin: 0 auto;
       object-fit: contain;
     }
@@ -95,7 +96,6 @@ export const TextCtn = styled.div`
   h2 {
     font-size: 2rem;
     font-weight: 500;
-    line-height: 1.75rem;
   }
 
   p {
@@ -116,10 +116,10 @@ export const TextCtn = styled.div`
 export const Offers = styled.div`
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 
   &:last-child {
-    margin-top: 2rem;
+    margin-top: 1rem;
 
     div:first-child {
       flex: 1;
