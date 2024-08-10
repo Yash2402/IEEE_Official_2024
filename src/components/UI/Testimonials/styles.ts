@@ -8,8 +8,8 @@ export const Wrapper = styled.section`
 
 export const Inner = styled.div`
   display: flex;
-  padding: 6.25rem 0;
-  width: 90%;
+  padding: 2.25rem 0;
+  width: 75%;
   max-width: 1440px;
   margin: 0 auto;
   flex-direction: column;
@@ -20,9 +20,9 @@ export const Inner = styled.div`
 export const Header = styled.header`
   text-align: center;
   max-width: 48.5rem;
-  margin: 0 auto 6.5rem;
+  margin: 0 auto 2.5rem;
   h1 {
-    color: var(--Background, #070606);
+    color: #e0e0e0;
     font-size: 4.75rem;
     font-weight: 400;
   }
@@ -38,7 +38,7 @@ export const Header = styled.header`
 export const TestimonialWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1rem;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -52,7 +52,8 @@ export const Testimonial = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5rem;
-  border-left: 2px solid var(--Background, #070606);
+  border: 2px solid #cdd6f4;
+  border-radius: 10px;
 
   @media (max-width: 768px) {
     border-left: none;
@@ -60,14 +61,12 @@ export const Testimonial = styled.div`
 `;
 
 export const Testimony = styled.p`
-  color: #292929;
-  font-size: 1.5rem;
+  color: #d0d0d0;
+  font-size: 1.4rem;
   font-weight: 400;
-  line-height: 2rem;
 
   @media (max-width: 768px) {
     font-size: 1rem;
-    line-height: 1.75rem;
   }
 `;
 
@@ -87,14 +86,13 @@ export const Name = styled.div`
   width: 100%;
 
   h3 {
-    color: var(--Background, #070606);
+    color: #CDD6F4;
     font-size: 1.5rem;
     font-weight: 500;
-    line-height: 1.5rem;
   }
 
   p {
-    color: #292929;
+    color: #CDD6F4;
     font-size: 0.875rem;
     font-weight: 400;
   }
