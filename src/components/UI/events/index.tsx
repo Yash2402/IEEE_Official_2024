@@ -14,7 +14,6 @@ import { IsMobile } from "../../../../libs/IsMobile";
 import {
   desktopHeaderPhrases,
   desktopParagraphPhrase,
-  mobileParagraphPhrase,
   offers,
 } from "./constants";
 import { Element } from "react-scroll";
