@@ -11,4 +11,8 @@ export const LinkTo = styled(Link)`
   color: var(--white);
   font-size: 1rem;
   font-weight: 600;
+  @media (max-width: 768px){
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
 `;

@@ -36,7 +36,7 @@ const HeroSection = () => {
               </>
             )}
           </HeroTextContainer>
-          <GetStartedButton padding="1rem 1.50rem" />
+          <GetStartedButton padding="0.50rem 1rem" />
         </Inner>
       </Wrapper>
     </Element>

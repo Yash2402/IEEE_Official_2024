@@ -44,7 +44,7 @@ export const BurgerMenu = styled.div`
 
     div {
       position: absolute;
-      background: #444444ff;
+      background: #888888ff;
       width: 150px;
       height: 540px;
       border-radius: 25px;
@@ -87,6 +87,11 @@ export const Nav = styled.div`
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition-delay: 0.5s;
 
+  a {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 400;
+  }
     &.active {
       opacity: 1;
       visibility: visible;

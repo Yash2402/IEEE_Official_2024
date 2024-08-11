@@ -34,6 +34,13 @@ export const Pill = styled.div`
     font-size: 1rem;
     font-weight: 400;
   }
+  @media (max-width: 768px){
+    span {
+        color: var(--light-gray);
+        font-size: 0.75rem;
+        font-weight: 400;
+    }
+  }
 `;
 
 export const HeroTextContainer = styled.div`
@@ -65,8 +72,7 @@ export const HeroTextContainer = styled.div`
     }
 
     p {
-      font-size: 1rem;
-      line-height: 1.5rem;
+      font-size: 0.85rem;
     }
   }
 `;
