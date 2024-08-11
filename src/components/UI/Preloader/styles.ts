@@ -28,7 +28,7 @@ export const Inner = styled.div`
   img {
     padding-top: 2rem;
     width: 10em;
-    height: 13em;
+    height: 12.5em;
   }
 
   div {
@@ -44,15 +44,18 @@ export const Inner = styled.div`
 
   @media (max-width: 768px) {
     gap: 1rem;
-    height: 13rem;
+    height: 14rem;
+    display: flex;
+    flex-direction: column;
+
     img {
       width: 7rem;
-      height: 100%;
+      height: auto;
     }
 
     div {
       div {
-        font-size: 6rem;
+        font-size: 3.75rem;
       }
     }
   }
